@@ -21,14 +21,7 @@ echo -e "$c | |_| |/ _ |/ __| |/ /   / _ \ | |\/| | " | pv -qL 600
 echo -e "$c |  _  | (_|| (__|   <   / ___ \| |  | | " | pv -qL 600
 echo -e "$c |_| |_|\___|\___|_|\_\ /_/   \_\_|  |_| " | pv -qL 600
 }
-mulai (){
-wget https://raw.githubusercontent.com/LimitQueenProject/banner/master/empass -o done
-for anjay in $(shuf empass)
-do
-echo "$anjay"
-sleep 0.3
-done
-}
+
 empas-fresh (){
 wget https://raw.githubusercontent.com/LimitQueenProject/banner/master/empas-fresh -o done
 for anjayy in $(shuf empas-fresh)
@@ -89,25 +82,23 @@ echo -e "$g╚══════════════════════
 echo -e "${p}"
 echo -e "$r Note : Untuk Berhenti Tekan ctrl+z"
 echo -e "${p}"
-echo -e "${y}[${g}1${y}]${b} Update Script${o}" | pv -qL 600
-echo -e "${y}[${g}2${y}]${b} Langsung Cari Empas Sekarang${o}" | pv -qL 600
-echo -e "${y}[${g}3${y}]${b} Langsung Cari Empas Fresh${o}" | pv -qL 600
-echo -e "${y}[${g}4${y}]${b} Langsung Cari Empas Uncheck${o}" | pv -qL 600
-echo -e "${y}[${g}5${y}]${b} Langsung Cari Empas Moonton${o}" | pv -qL 600
+echo -e "${y}[${g}1${y}]${b} Cari Empas Fresh${o}" | pv -qL 600
+echo -e "${y}[${g}2${y}]${b} Cari Empas Uncheck${o}" | pv -qL 600
+echo -e "${y}[${g}3${y}]${b} Cari Empas Campuran${o}" | pv -qL 600
+echo -e "${y}[${g}0${y}]${b} Pembaruan${o}" | pv -qL 600
 echo ""
 echo -e "$g╔═╣${y}  Silahkan pilih  ${g}║"
 echo -e "$g║ ╚══════════════════╝"
 read -p $'\033[0;32m╚══════>\033[0m ' pilihan
-if [[ $pilihan == 1 ]]; then
+if [[ $pilihan == 0 ]]; then
 git pull origin master
 exit
-elif [[ $pilihan == 2 ]]; then
-mulai
-elif [[ $pilihan == 3 ]]; then
+
+elif [[ $pilihan == 1 ]]; then
 empas-fresh
-elif [[ $pilihan == 4 ]]; then
+elif [[ $pilihan == 2 ]]; then
 empas-uncheck
-elif [[ $pilihan == 5 ]]; then
+elif [[ $pilihan == 3 ]]; then
 empas-moontod
 else
 echo -e "${r}Pilih yang ada aja njeng"
